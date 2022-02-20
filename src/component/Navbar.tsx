@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from "react-router-dom";
+
 export default function Navbar(){
 
     return (
@@ -13,16 +15,15 @@ export default function Navbar(){
 
       <nav id="navbar" className="navbar">
         <ul>
-          <li><a className="nav-link scrollto" href="index.html#about">Home</a></li>
+          <li><a className="nav-link scrollto" href="/">Home</a></li>
           <li><a className="nav-link scrollto" href="index.html#about">Projects</a></li>
           <li><a className="nav-link scrollto" href="index.html#services">Team</a></li>
-          <li><a className="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
           <li><a className="nav-link scrollto" href="index.html#team">About us</a></li>
         </ul>
         <i className="bi bi-list mobile-nav-toggle d-none"></i>
       </nav>
 
-      <a className="btn-getstarted scrollto" href="index.html#about">Sign for Newsletter</a>
+      <a className="btn-getstarted scrollto" href="index.html#about">Join Us</a>
 
     </div>
   </header>

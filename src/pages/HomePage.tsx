@@ -1,7 +1,4 @@
 import React from 'react';
-import '../variables.css';
-import '../App.css';
-
 
 export default function Home() {
   return (
@@ -92,21 +89,20 @@ export default function Home() {
 
         <div className="row g-0">
           <div className="col-lg-6 video-play position-relative">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" className="glightbox play-btn"></a>
+            <a href="https://youtu.be/eCCKH6qYLKo" className="glightbox play-btn"></a>
           </div>
           <div className="col-lg-6">
             <div className="content d-flex flex-column justify-content-center h-100">
-              <h3>Voluptatem dignissimos provident quasi corporis</h3>
+              <h3>Know us quick with this introductory video</h3>
               <p className="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                We are a closely coupled community, meaning we work with each other very closely. We film the fun aspects of our jobs and wishes you to see them too! But before, here are some stuff we abide to at our community.
               </p>
               <ul>
-                <li><i className="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i className="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i className="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                <li><i className="bi bi-check-circle"></i> Independence interms of creativity and innovation.</li>
+                <li><i className="bi bi-check-circle"></i> No honourary salutations. No Sir/ma'am. Just say our names!</li>
+                <li><i className="bi bi-check-circle"></i> Work + Fun = Job Completed!</li>
               </ul>
-              <a href="#" className="read-more align-self-start"><span>Read More</span><i className="bi bi-arrow-right"></i></a>
+              <a href="#" className="read-more align-self-start"><span>Meet Team</span><i className="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -143,7 +139,7 @@ export default function Home() {
           <li className="nav-item col-6 col-md-4 col-lg-2">
             <a className="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
               <i className="bi bi-command color-red"></i>
-              <h4>Meta Verse</h4>
+              <h4>Tech Mentorship</h4>
             </a>
           </li>
 
@@ -167,15 +163,14 @@ export default function Home() {
           <div className="tab-pane active show" id="tab-1">
             <div className="row gy-4">
               <div className="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                <h3>Modinest</h3>
+                <h3>Data Science</h3>
                 <p className="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
+                  We use advanced data analytics techniques to discover hidden meanings behind a given set of data, which can be hosted open source at sources like <a href="https://www.kaggle.com/">Kaggle.com</a> for ML engineers make solutions for the solution.
                 </p>
                 <ul>
-                  <li><i className="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i className="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i className="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                  <li><i className="bi bi-check-circle-fill"></i> Hottest problems to work on.</li>
+                  <li><i className="bi bi-check-circle-fill"></i> Total work credit and exposure.</li>
+                  <li><i className="bi bi-check-circle-fill"></i> Learn by solving real-life problems and challenges.</li>
                 </ul>
                 <p>
                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
