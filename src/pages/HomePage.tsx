@@ -1,6 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
+
+  const [btnClassName, setBtnClassName] = useState('btn btn-primary');
+  const [btnText, setBtnText] = useState('Send Message');
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  function changeSendButtonStyle(){
+    setBtnClassName(btnClassName => 'btn btn-success');
+    setBtnText(btnText => "Message Sent!")
+  }
+
+  function handleNameInput(e:any){
+    e.preventDefault();
+    setName(name => e.target.value);
+  }
+
+  function handleEmailInput(e:any){
+    e.preventDefault();
+    setEmail(email => e.target.value);
+  }
+
+  function handleSubjectInput(e:any){
+    e.preventDefault();
+    setSubject(subject => e.target.value);
+  }
+
+  function handleMessageInput(e:any){
+    e.preventDefault();
+    setMessage(message => e.target.value);
+  }
+
+  function onSubmit(e:any){
+    const entries = [name, email, subject, message];
+    console.log(entries);
+  }
+
   return (
     <>
 
@@ -468,24 +507,24 @@ export default function Home() {
             <form action="forms/contact.php" method="post" role="form" className="php-email-form">
               <div className="row">
                 <div className="col-md-6 form-group">
-                  <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required/>
+                  <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" onChange={handleNameInput} required/>
                 </div>
                 <div className="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required/>
+                  <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" onChange={handleEmailInput} required/>
                 </div>
               </div>
               <div className="form-group mt-3">
-                <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required/>
+                <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" onChange={handleSubjectInput} required/>
               </div>
               <div className="form-group mt-3">
-                <textarea className="form-control" name="message" placeholder="Message" required></textarea>
+                <textarea className="form-control" name="message" placeholder="Message" onChange={handleMessageInput} required></textarea>
               </div>
               <div className="my-3">
                 <div className="loading">Loading</div>
                 <div className="error-message"></div>
                 <div className="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div className="text-center"><button type="submit">Send Message</button></div>
+              <div className="text-center"><button type="button" className={btnClassName} onClick={onSubmit} >{btnText}</button></div>
             </form>
           </div>
 

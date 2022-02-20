@@ -15,15 +15,30 @@ export default function Navbar(){
 
       <nav id="navbar" className="navbar">
         <ul>
-          <li><a className="nav-link scrollto" href="/">Home</a></li>
-          <li><a className="nav-link scrollto" href="index.html#about">Projects</a></li>
-          <li><a className="nav-link scrollto" href="index.html#services">Team</a></li>
-          <li><a className="nav-link scrollto" href="index.html#team">About us</a></li>
+          
+          <Link to="/">
+          <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>Home</a></li>
+          </Link>
+
+          <Link to="/projects">
+          <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>Projects</a></li>
+          </Link>
+
+          <Link to="/team">
+          <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>Team</a></li>
+          </Link>
+
+          <Link to="/about-us">
+          <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>About us</a></li>
+          </Link>
+
         </ul>
         <i className="bi bi-list mobile-nav-toggle d-none"></i>
       </nav>
 
+      <Link to="/projects" className="mb-3">
       <a className="btn-getstarted scrollto" href="index.html#about">Join Us</a>
+      </Link>
 
     </div>
   </header>
