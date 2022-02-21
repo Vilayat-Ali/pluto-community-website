@@ -3,17 +3,14 @@ import './css/search.css';
 
 export default function SearchBar(props: any) {
 
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('');
-
   function handleSearchBarText(e: any){
     e.preventDefault();
-    setSearchTerm(e.target.value);
+    props.affectSearch(e.target.value);
   }
 
   function handleSelection(e: any){
     e.preventDefault();
-    setSortBy(e.target.value);
+    props.affectSort(e.target.value);
   }
 
   return (
@@ -22,7 +19,7 @@ export default function SearchBar(props: any) {
                 <option className="text-center" value="">Sort By</option>
                 {props.children}
             </select>
-            <input type="text" className="flex-row form-control" id="search" placeholder="Search" style={{width: '55vw'}} value={searchTerm} onChange={handleSearchBarText} />
+            <input type="text" className="flex-row form-control" id="search" placeholder="Search" style={{width: '55vw'}} onChange={handleSearchBarText} />
     </div>
   )
 }

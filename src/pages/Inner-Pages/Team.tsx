@@ -9,7 +9,7 @@ export default function Team() {
 
     const [team, setTeam] = useState([]);
 
-    const [sortBy, setsortBy] = useState('');
+    const [sortBy, setSortBy] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect( () => {
@@ -23,15 +23,6 @@ export default function Team() {
         return function(){ isMount = true }
     }, [])
 
-    function selectHandler(e: any){
-        e.preventDefault();
-        setsortBy(sortBy => e.target.value);
-    }
-
-    function searchBarHandler(e: any){
-        e.preventDefault();
-        setSearchTerm(searchTerm => e.target.value);
-    }
 
     const demoTeam = [
         {
@@ -71,9 +62,11 @@ export default function Team() {
   return (
     <>
 
-        <SearchBar>
+        <SearchBar
+        affectSearch={(searchTerm: any) => setSearchTerm(searchTerm)}
+        affectSort={(sortBy: any) => setSortBy(sortBy)}>
                 <option value="Name">Name</option>
-                <option value="Role">Role</option>
+                <option value="Tech">Role</option>
         </SearchBar>
 
         <div className="row">

@@ -23,8 +23,8 @@ export default function TeamCard(props: teamCardType) {
                   </div>
               </div>
               <div className="single_advisor_details_info">
-                <h6>{props.name}</h6>
-                <p className="designation" id="role">{props.role}</p>
+                <h6 className="text-secondary">{props.name}</h6>
+                <p className="designation text-secondary" id="role">{props.role}</p>
               </div>
             </div>
     </div>
