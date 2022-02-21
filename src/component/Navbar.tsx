@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar(){
 
@@ -16,29 +16,29 @@ export default function Navbar(){
       <nav id="navbar" className="navbar">
         <ul>
           
-          <Link to="/">
+          <NavLink to="/">
           <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>Home</a></li>
-          </Link>
+          </NavLink>
 
-          <Link to="/projects">
+          <NavLink to="/projects">
           <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>Projects</a></li>
-          </Link>
+          </NavLink>
 
-          <Link to="/team">
+          <NavLink to="/team">
           <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>Team</a></li>
-          </Link>
+          </NavLink>
 
-          <Link to="/about-us">
+          <NavLink to="/about-us">
           <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>About us</a></li>
-          </Link>
+          </NavLink>
 
         </ul>
         <i className="bi bi-list mobile-nav-toggle d-none"></i>
       </nav>
 
-      <Link to="/projects" className="mb-3">
+      <NavLink to="/projects" className="mb-3">
       <a className="btn-getstarted scrollto" href="index.html#about">Join Us</a>
-      </Link>
+      </NavLink>
 
     </div>
   </header>

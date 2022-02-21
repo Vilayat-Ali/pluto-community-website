@@ -12,7 +12,7 @@ import Home from "./pages/HomePage";
 import InnerPage from "./pages/InnerPage";
 
 // Inner page 
-import Project from "./pages/Inner-Pages/project";
+import Project from "./pages/Inner-Pages/Project";
 import Team from "./pages/Inner-Pages/Team";
 import AboutUs from "./pages/Inner-Pages/AboutUs";
 
@@ -26,7 +26,7 @@ function App() {
           
           <Routes>
 
-            <Route path="/" element={<Home />} />
+            <Route index element={<Home />} />
 
             <Route path="/projects" 
               element={<InnerPage pageName="Projects" pageDescription="Here are some of our recent projects!" ordinaryPage={true}>

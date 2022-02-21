@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Footer(){
+
+    const [email, setEmail] = useState('');
+
+    function inputHandler(e:any){
+        setEmail(email => e.target.value);
+    }
+
+    function Subscribe(){ 
+        if(email === ''){
+            alert('Enter a valid email');
+        }else{
+            console.log(email);
+        }
+    }
+
     return (
         <>
             <footer id="footer" className="footer">
@@ -43,8 +58,9 @@ export default function Footer(){
                         <div className="col-lg-4 col-md-6 footer-newsletter">
                             <h4>Our Newsletter</h4>
                             <p>Stay up-to-date with our community by signing up for the official newsletter for free.</p>
-                            <form action="" method="post">
-                            <input type="email" name="email"/><input type="submit" value="Subscribe"/>
+                            <form>
+                            <input type="email" name="email" onChange={inputHandler} placeholder="Enter your email" />
+                            <input type="button" className="subscribe-btn" onClick={Subscribe} value="Subscribe"/>
                             </form>
 
                         </div>

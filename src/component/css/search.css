@@ -1,0 +1,30 @@
+#searchbar{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 575px){
+    #select{
+        width: 10vw!important;
+        color: red;
+    }
+    #search{
+        width: 65vw;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    #select{
+        width: 10vw;
+    }
+      
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #select{
+        width: 20vw!important;
+    }
+    #seacrh{
+        width: 65vw;
+    }
+}

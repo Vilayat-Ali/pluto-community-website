@@ -1526,7 +1526,7 @@
   .footer .footer-content .footer-newsletter form input[type=email]:focus-visible {
     outline: none;
   }
-  .footer .footer-content .footer-newsletter form input[type=submit] {
+  .footer .footer-content .footer-newsletter form .subscribe-btn {
     position: absolute;
     top: 0;
     right: -2px;
@@ -1683,7 +1683,7 @@
   padding: 10px 12px;
   height: 290px;
 }
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button{
   background: var(--color-primary);
   border: 0;
   padding: 13px 50px;
@@ -1691,7 +1691,7 @@
   transition: 0.4s;
   border-radius: 0;
 }
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button:hover {
   background: rgba(var(--color-primary-rgb), 0.85);
 }
 @-webkit-keyframes animate-loading {

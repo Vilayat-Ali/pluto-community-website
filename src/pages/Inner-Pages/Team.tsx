@@ -1,28 +1,114 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// Components 
+import SearchBar from "../../component/SearchBar";
+import TeamCard from '../../component/Cards/TeamCard';
+
 export default function Team() {
 
     const [team, setTeam] = useState([]);
 
+    const [sortBy, setsortBy] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
+
     useEffect( () => {
-        (  async() => {
-            await axios.get("https://jsonplaceholder.typicode.com/comments").then((res: any) => {
-                setTeam(team => res.data);
-                console.log(res);
-            }).catch((err: any) => {
-                
-            })
-        } )()
-    })
+        let isMount = false;
+
+        axios.get("https://jsonplaceholder.typicode.com/comments").then(function(response: any){
+            if(isMount) return;
+            setTeam(team => response.data);
+        });
+
+        return function(){ isMount = true }
+    }, [])
+
+    function selectHandler(e: any){
+        e.preventDefault();
+        setsortBy(sortBy => e.target.value);
+    }
+
+    function searchBarHandler(e: any){
+        e.preventDefault();
+        setSearchTerm(searchTerm => e.target.value);
+    }
+
+    const demoTeam = [
+        {
+            name: 'Syed Vilayat Ali Rizvi',
+            role: 'Founder',
+            image: '',
+            twitter: '',
+            github: 'https://www.github.com/Vilayat-Ali',
+            linkedin: ''
+        },
+        {
+            name: 'Member 1',
+            role: 'Software Engineer',
+            image: '',
+            twitter: '',
+            github: 'https://www.github.com/Vilaya-Ali',
+            linkedin: ''
+        },
+        {
+            name: 'Member 2',
+            role: 'Founder Manager',
+            image: '',
+            twitter: '',
+            github: 'https://www.github.com/Vilaya-Ali',
+            linkedin: ''
+        },
+        {
+            name: 'Member 3',
+            role: 'Manager Founder',
+            image: '',
+            twitter: '',
+            github: 'https://www.github.com/Vilayat-Ali',
+            linkedin: ''
+        }
+    ];
 
   return (
     <>
-        {team.map((member: any) => {
-            return (
-                <p key={member.id}>{member.name}</p>
-            )
-        })}
+
+        <SearchBar>
+                <option value="Name">Name</option>
+                <option value="Role">Role</option>
+        </SearchBar>
+
+        <div className="row">
+
+          { demoTeam.filter((memberData) => {
+              if(searchTerm === ''){
+                  return memberData;
+              }
+              if(searchTerm !== ''){
+                  if(sortBy === '' && (memberData.name.toLowerCase().includes(searchTerm.toLowerCase()) || memberData.role.toLowerCase().includes(searchTerm.toLowerCase()))){
+                      return memberData;
+                  }
+                  if(sortBy === 'Name' && memberData.name.toLowerCase().includes(searchTerm.toLowerCase())){
+                      return memberData;
+                  }
+                  if(sortBy === 'Role' && memberData.role.toLowerCase().includes(searchTerm.toLowerCase())){
+                    return memberData;
+                  }
+              }
+          }).map(function(member){
+              return (
+
+                    <TeamCard 
+                        key={member.name}
+                        name={member.name}
+                        image={"https://bootdey.com/img/Content/avatar/avatar1.png"}
+                        role={member.role}
+                        github={member.github}
+                        twitter={member.twitter}
+                        linkedin={member.linkedin}
+                    />
+              )
+          }) }
+
+        </div>
     </>
   )
 }

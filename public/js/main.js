@@ -1,9 +1,4 @@
-/**
-* Template Name: HeroBiz - v2.0.0
-* Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -28,32 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /**
-   * Navbar links active state on scroll
-   */
-  let navbarlinks = document.querySelectorAll('#navbar .scrollto');
-
-  function navbarlinksActive() {
-    navbarlinks.forEach(navbarlink => {
-
-      if (!navbarlink.hash) return;
-
-      let section = document.querySelector(navbarlink.hash);
-      if (!section) return;
-
-      let position = window.scrollY;
-      if (navbarlink.hash != '#header') position += 200;
-
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active');
-      } else {
-        navbarlink.classList.remove('active');
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive);
-  document.addEventListener('scroll', navbarlinksActive);
-
-  /**
    * Function to scroll to an element with top ofset
    */
   function scrollto(el) {
@@ -70,37 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     });
   }
-
-  /**
-   * Fires the scrollto function on click to links .scrollto
-   */
-  let selectScrollto = document.querySelectorAll('.scrollto');
-  selectScrollto.forEach(el => el.addEventListener('click', function(event) {
-    if (document.querySelector(this.hash)) {
-      event.preventDefault();
-
-      let mobileNavActive = document.querySelector('.mobile-nav-active');
-      if (mobileNavActive) {
-        mobileNavActive.classList.remove('mobile-nav-active');
-
-        let navbarToggle = document.querySelector('.mobile-nav-toggle');
-        navbarToggle.classList.toggle('bi-list');
-        navbarToggle.classList.toggle('bi-x');
-      }
-      scrollto(this.hash);
-    }
-  }));
-
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        scrollto(window.location.hash);
-      }
-    }
-  });
 
   /**
    * Mobile nav toggle
