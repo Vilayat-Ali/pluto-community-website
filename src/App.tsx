@@ -8,14 +8,13 @@ import Footer from './component/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Page Components
-import Demo from "./pages/demo";
 import Home from "./pages/HomePage";
 import InnerPage from "./pages/InnerPage";
 
 // Inner page 
-import Project from "./pages/Inner-Pages/Project";
-import Team from "./pages/Inner-Pages/Team";
-import AboutUs from "./pages/Inner-Pages/AboutUs";
+import Project from "./pages/Inner/Project";
+import Team from "./pages/Inner/Team";
+import AboutUs from "./pages/Inner/AboutUs";
 
 function App() {
     return (
