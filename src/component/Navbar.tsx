@@ -36,8 +36,8 @@ export default function Navbar(){
         <i className="bi bi-list mobile-nav-toggle d-none"></i>
       </nav>
 
-      <NavLink to="/projects" className="mb-3">
-      <a className="btn-getstarted scrollto" href="index.html#about">Join Us</a>
+      <NavLink to="/join" className="mb-3">
+      <a className="btn-getstarted scrollto">Join Us</a>
       </NavLink>
 
     </div>

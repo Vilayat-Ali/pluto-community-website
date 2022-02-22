@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 // Components 
 import SearchBar from "../../component/SearchBar";
@@ -11,17 +10,6 @@ export default function Team() {
 
     const [sortBy, setSortBy] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
-
-    useEffect( () => {
-        let isMount = false;
-
-        axios.get("https://jsonplaceholder.typicode.com/comments").then(function(response: any){
-            if(isMount) return;
-            setTeam(team => response.data);
-        });
-
-        return function(){ isMount = true }
-    }, [])
 
 
     const demoTeam = [
@@ -66,12 +54,12 @@ export default function Team() {
         affectSearch={(searchTerm: any) => setSearchTerm(searchTerm)}
         affectSort={(sortBy: any) => setSortBy(sortBy)}>
                 <option value="Name">Name</option>
-                <option value="Tech">Role</option>
+                <option value="Role">Role</option>
         </SearchBar>
 
         <div className="row">
 
-          { demoTeam.filter((memberData) => {
+          { demoTeam.filter(function(memberData){
               if(searchTerm === ''){
                   return memberData;
               }

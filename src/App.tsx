@@ -52,6 +52,16 @@ function App() {
               } 
               />
 
+            <Route path="/join" 
+              element={
+              <InnerPage pageName="Join Us" pageDescription="Fill the form to request for joining the most fun-filled community of techies all around the world!" ordinaryPage={true}>
+                {/* Your page content react component */}
+                  <AboutUs />
+                {/* Your page content react component */}
+              </InnerPage>
+              } 
+              />
+
             <Route path="*" element={
               <InnerPage pageName="404" pageDescription="Yeah, we pardon your this mistake!" ordinaryPage={false}>
                 <div className="d-flex justify-content-center align-items-center" id="main" style={{margin: '40vh auto'}}>

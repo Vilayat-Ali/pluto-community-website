@@ -12,7 +12,7 @@ export default function ProjectCard(props: any) {
 				<img className="postcard__img" src={props.image} alt="Image Title" />
 			</a>
 			<div className="postcard__text">
-				<h1 className="postcard__title blue"><a href="#">{props.title}</a></h1>
+				<h1 className="postcard__title blue"><a href={props.githubLink ? props.githubLink: 'https://www.github.com'}>{props.title}</a></h1>
 				<div className="postcard__subtitle small">
 					<time dateTime="2020-05-25 12:00:00">
 						<i className="fas fa-calendar-alt mr-2"></i>&nbsp;{props.postedAt}
