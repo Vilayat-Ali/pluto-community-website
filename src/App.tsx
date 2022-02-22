@@ -8,6 +8,7 @@ import Footer from './component/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Page Components
+import Demo from "./pages/demo";
 import Home from "./pages/HomePage";
 import InnerPage from "./pages/InnerPage";
 

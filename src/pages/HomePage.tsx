@@ -42,7 +42,6 @@ export default function Home() {
 
   return (
     <>
-
     <section id="hero-animated" className="hero-animated d-flex align-items-center">
       <div className="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
         <img src="/img/hero-carousel/hero-carousel-3.svg" className="img-fluid animated" alt="hero-section"/>
@@ -556,7 +555,7 @@ export default function Home() {
 
     <a href="#" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
 
-    <div id="preloader"></div>
+    
 
 
       </>
