@@ -14,7 +14,7 @@ export default function Navbar(){
       </a>
 
       <nav id="navbar" className="navbar">
-        <ul>
+        <ul style={{listStyle: 'none', textAlign: 'center'}}>
           
           <NavLink to="/">
           <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>Home</a></li>
@@ -36,7 +36,7 @@ export default function Navbar(){
         <i className="bi bi-list mobile-nav-toggle d-none"></i>
       </nav>
 
-      <NavLink to="/join" className="mb-3">
+      <NavLink to="/join">
       <a className="btn-getstarted scrollto">Join Us</a>
       </NavLink>
 

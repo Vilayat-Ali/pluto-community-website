@@ -25,25 +25,25 @@ export default function ProjectCard(props: any) {
 
           if(tag.tagType === 'tech'){
             return (
-              <li className="tag__item"><i className="fa fa-microchip"></i>&nbsp;&nbsp;{tag.tagName}</li>
+              <li className="tag__item" key={tag.id}><i className="fa fa-microchip"></i>&nbsp;&nbsp;{tag.tagName}</li>
             )
           }
 
           if(tag.tagType === 'package'){
             return (
-              <li className="tag__item"><i className="fa fa-box"></i>&nbsp;&nbsp;{tag.tagName}</li>
+              <li className="tag__item" key={tag.id}><i className="fa fa-box"></i>&nbsp;&nbsp;{tag.tagName}</li>
             )
           }
 
           if(tag.tagType === 'web-app'){
             return (
-              <li className="tag__item"><i className="fa fa-globe"></i>&nbsp;&nbsp;{tag.tagName}</li>
+              <li className="tag__item" key={tag.id}><i className="fa fa-globe"></i>&nbsp;&nbsp;{tag.tagName}</li>
             )
           }
 
           if(tag.tagType === 'doc'){
             return (
-              <li className="tag__item"><i className="fa fa-book"></i>&nbsp;&nbsp;{tag.tagName}</li>
+              <li className="tag__item" key={tag.id}><i className="fa fa-book"></i>&nbsp;&nbsp;{tag.tagName}</li>
             )
           }
             

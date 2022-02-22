@@ -20,22 +20,27 @@ export default function Project() {
         description: 'This is the project description and I am happy to debug my reactJS application',
         tags: [
           {
+            id: 1,
             tagName: 'ReactJS',
             tagType: 'package'
           },
           {
+            id: 2,
             tagName: 'Redux',
             tagType: 'tech'
           },
           {
+            id: 3,
             tagName: 'projectCard',
             tagType: 'tech'
           },
           {
+            id: 4,
             tagName: 'projectCard',
             tagType: 'web-app'
           },
           {
+            id: 5,
             tagName: 'projectCard',
             tagType: 'doc'
           }
@@ -49,22 +54,27 @@ export default function Project() {
         githubLink: 'https://www.github.com/Vilayat-Ali',
         tags: [
           {
-            tagName: 'projectCard',
+            id: 1,
+            tagName: 'ReactJS',
             tagType: 'package'
           },
           {
+            id: 2,
+            tagName: 'Redux',
+            tagType: 'tech'
+          },
+          {
+            id: 3,
             tagName: 'projectCard',
             tagType: 'tech'
           },
           {
+            id: 4,
             tagName: 'projectCard',
-            tagType: 'tech'
-          },
-          {
-            tagName: 'NextJS',
             tagType: 'web-app'
           },
           {
+            id: 5,
             tagName: 'projectCard',
             tagType: 'doc'
           }
@@ -77,22 +87,27 @@ export default function Project() {
         description: 'This is the project description and I am happy to debug my reactJS application',
         tags: [
           {
-            tagName: 'projectCard',
+            id: 1,
+            tagName: 'ReactJS',
             tagType: 'package'
           },
           {
+            id: 2,
+            tagName: 'Redux',
+            tagType: 'tech'
+          },
+          {
+            id: 3,
             tagName: 'projectCard',
             tagType: 'tech'
           },
           {
-            tagName: 'projectCard',
-            tagType: 'tech'
-          },
-          {
+            id: 4,
             tagName: 'projectCard',
             tagType: 'web-app'
           },
           {
+            id: 5,
             tagName: 'projectCard',
             tagType: 'doc'
           }
