@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 export default function Footer(){
 
@@ -36,19 +37,44 @@ export default function Footer(){
                         <div className="col-lg-2 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
-                            <li><i className="bi bi-chevron-right"></i> <a href="/">Home</a></li>
-                            <li><i className="bi bi-chevron-right"></i> <a href="/">Projects</a></li>
-                            <li><i className="bi bi-chevron-right"></i> <a href="/">Team</a></li>
-                            <li><i className="bi bi-chevron-right"></i> <a href="/">Portfolio</a></li>
-                            <li><i className="bi bi-chevron-right"></i> <a href="/">Join us</a></li>
+
+                            <li>
+                            <Link to="/">
+                            <i className="bi bi-chevron-right"></i> <a href="/">Home</a>
+                            </Link>
+                            </li>
+
+                            <li>
+                            <Link to="/projects">
+                            <i className="bi bi-chevron-right"></i> <a href="/projects">Projects</a>
+                            </Link>
+                            </li>
+
+                            <li>
+                            <Link to="/team">
+                            <i className="bi bi-chevron-right"></i> <a href="/team">Team</a>
+                            </Link>
+                            </li>
+
+                            <li>
+                            <Link to="/news">
+                            <i className="bi bi-chevron-right"></i> <a href="/">News</a>
+                            </Link>
+                            </li>
+
+                            <li>
+                            <Link to="/Join">
+                            <i className="bi bi-chevron-right"></i> <a href="/">Join</a>
+                            </Link>
+                            </li>
+
                             </ul>
                         </div>
 
                         <div className="col-lg-3 col-md-6 footer-links">
                             <h4>Our Community</h4>
                             <ul>
-                            <li><i className="bi bi-chevron-right"></i> <a href="/">Discord</a></li>
-                            <li><i className="bi bi-chevron-right"></i> <a href="/">Reddit</a></li>
+                            <li><i className="bi bi-chevron-right"></i> <a href="https://discord.gg/eNkJWvGCfp">Discord</a></li>
                             <li><i className="bi bi-chevron-right"></i> <a href="/">Github</a></li>
                             <li><i className="bi bi-chevron-right"></i> <a href="/">AWS</a></li>
                             <li><i className="bi bi-chevron-right"></i> <a href="/">Gitlab</a></li>
@@ -74,7 +100,7 @@ export default function Footer(){
 
                         <div className="d-flex flex-column align-items-center align-items-lg-start">
                         <div className="copyright">
-                            &copy; Copyright <strong><span>Neuron</span></strong> logo. All Rights Reserved. Template design credits - <a href="https://bootstrapmade.com">bootstrapmade.com</a>
+                            &copy; Copyright <strong><span>Neuron</span></strong> logo. All Rights Reserved. Credits to <a href="https://bootstrapmade.com">bootstrapmade.com</a>
                         </div>
                         </div>
 

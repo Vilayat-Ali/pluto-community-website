@@ -24,6 +24,10 @@ export default function Navbar(){
           <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>Projects</a></li>
           </NavLink>
 
+          <NavLink to="/news">
+          <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>News</a></li>
+          </NavLink>
+
           <NavLink to="/team">
           <li><a className="nav-link scrollto" style={{cursor: 'pointer'}}>Team</a></li>
           </NavLink>

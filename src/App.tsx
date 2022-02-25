@@ -15,6 +15,9 @@ import InnerPage from "./pages/InnerPage";
 import Project from "./pages/Inner/Project";
 import Team from "./pages/Inner/Team";
 import AboutUs from "./pages/Inner/AboutUs";
+import News from "./pages/Inner/News";
+import Join from "./pages/Inner/Join";
+import Problem from "./pages/Inner/Problem";
 
 function App() {
     return (
@@ -52,11 +55,31 @@ function App() {
               } 
               />
 
+            <Route path="/news" 
+              element={
+              <InnerPage pageName="News" pageDescription="Gather the important news of what's going in te community" ordinaryPage={true}>
+                {/* Your page content react component */}
+                  <News />
+                {/* Your page content react component */}
+              </InnerPage>
+              } 
+              />
+
             <Route path="/join" 
               element={
               <InnerPage pageName="Join Us" pageDescription="Fill the form to request for joining the most fun-filled community of techies all around the world!" ordinaryPage={true}>
                 {/* Your page content react component */}
-                  <AboutUs />
+                  <Join />
+                {/* Your page content react component */}
+              </InnerPage>
+              } 
+              />
+
+            <Route path="/report-a-problem" 
+              element={
+              <InnerPage pageName="Report Problem" pageDescription="Inform us of a important problem and you can win amazing community swags" ordinaryPage={true}>
+                {/* Your page content react component */}
+                  <Problem />
                 {/* Your page content react component */}
               </InnerPage>
               } 

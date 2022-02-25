@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 export default function Home() {
 
@@ -48,7 +49,9 @@ export default function Home() {
         <h2>Welcome to <span>Neuron</span> Tech Community</h2>
         <p>The vast community of passionate designers and developers who are determined to change the world, one line of code at a time.</p>
         <div className="d-flex">
-          <a href="#about" className="btn-get-started scrollto">Register</a>
+          <Link to="/join">
+          <a className="btn-get-started scrollto">Join the Community</a>
+          </Link>
           <a href="http" className="glightbox btn-watch-video d-flex align-items-center" style={{cursor: 'pointer'}}>Join Discord Server</a>
         </div>
       </div>
@@ -108,7 +111,9 @@ export default function Home() {
               <p>
                 We encourage our community members, supporters and common people to inform us of any such 'Important Problems' in their nearby world. Not only we will try our 100% to solve the problem but also gives the reporter credits and FREE Swags!  
               </p>
+              <Link to="/report-a-problem">
               <a className="cta-btn align-self-start" href="#">Report an Important Problem</a>
+              </Link>
             </div>
 
             <div className="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
@@ -527,25 +532,6 @@ export default function Home() {
               </form>
             </div>
 
-          </div>
-
-        </div>
-      </section>
-
-      <section id="clients" className="clients">
-        <div className="container" data-aos="zoom-out">
-
-          <div className="clients-slider swiper">
-            <div className="swiper-wrapper align-items-center">
-              <div className="swiper-slide"><img src="/img/clients/client-1.png" className="img-fluid" alt=""/></div>
-              <div className="swiper-slide"><img src="/img/clients/client-2.png" className="img-fluid" alt=""/></div>
-              <div className="swiper-slide"><img src="/img/clients/client-3.png" className="img-fluid" alt=""/></div>
-              <div className="swiper-slide"><img src="/img/clients/client-4.png" className="img-fluid" alt=""/></div>
-              <div className="swiper-slide"><img src="/img/clients/client-5.png" className="img-fluid" alt=""/></div>
-              <div className="swiper-slide"><img src="/img/clients/client-6.png" className="img-fluid" alt=""/></div>
-              <div className="swiper-slide"><img src="/img/clients/client-7.png" className="img-fluid" alt=""/></div>
-              <div className="swiper-slide"><img src="/img/clients/client-8.png" className="img-fluid" alt=""/></div>
-            </div>
           </div>
 
         </div>
