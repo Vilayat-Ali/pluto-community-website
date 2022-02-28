@@ -46,7 +46,7 @@ export default function Home() {
     <section id="hero-animated" className="hero-animated d-flex align-items-center">
       <div className="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
         <img src="/img/hero-carousel/hero-carousel-3.svg" className="img-fluid animated" alt="hero-section"/>
-        <h2>Welcome to <span>Neuron</span> Tech Community</h2>
+        <h2>Welcome to <span>Pluto</span> Tech Community</h2>
         <p>The vast community of passionate designers and developers who are determined to change the world, one line of code at a time.</p>
         <div className="d-flex">
           <Link to="/join">

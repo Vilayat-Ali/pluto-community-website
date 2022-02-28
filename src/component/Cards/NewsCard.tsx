@@ -18,7 +18,7 @@ export default function NewsCard(props: newsCardType) {
             <div className="row">
                 <div className="col-lg-6 mx-auto">
                     <blockquote className="blockquote blockquote-custom bg-white p-5 shadow rounded">
-                        <div className="blockquote-custom-icon bg-info shadow-sm"><i className="fa fa-quote-left text-white"></i></div>
+                        <div className="blockquote-custom-icon shadow-sm" style={{backgroundColor: '#0ea2bd'}}><i className="fa fa-quote-left text-white"></i></div>
                         <p className="mb-0 mt-2 font-italic">{props.message}</p>
                         <p className="mb-0 mt-2 row">
                             {
