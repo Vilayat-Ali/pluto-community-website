@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Footer(){
 
@@ -9,11 +10,24 @@ export default function Footer(){
         setEmail(email => e.target.value);
     }
 
+    async function subscribeClient(){
+        await axios.post(
+            'http://127.0.0.1:8000/api/client/newsletter/',
+            {
+                email: email 
+            }
+        ).then((res: any) => {
+            console.log({"success": true})
+        }).catch((err: any) => {
+            console.log(err.message)
+        })
+    }
+
     function Subscribe(){ 
         if(email === ''){
             alert('Enter a valid email');
         }else{
-            console.log(email);
+            
         }
     }
 
