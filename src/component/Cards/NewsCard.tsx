@@ -24,7 +24,7 @@ export default function NewsCard(props: newsCardType) {
                             {
                                 props.links.map(function(link: {link: string, message: string}){
                                     return (
-                                        <a href={link.link} className="col-12">{link.message}</a>
+                                        <a href={link.link} className="col-12 fs-6">{link.message}</a>
                                     )
                                 })
                             }

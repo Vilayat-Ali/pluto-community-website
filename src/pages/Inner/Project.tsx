@@ -12,109 +12,16 @@ export default function Project() {
     const [sortBy, setSortBy] = useState<string>('');
     const [searchTerm, setSearchTerm] = useState<string>('');
 
-    const mockData = [
-      {
-        title: 'Project - XYZ',
-        image: 'https://picsum.photos/1000/1000',
-        postedAt: 'monday, May 2023',
-        description: 'This is the project description and I am happy to debug my reactJS application',
-        tags: [
-          {
-            id: 1,
-            tagName: 'ReactJS',
-            tagType: 'package'
-          },
-          {
-            id: 2,
-            tagName: 'Redux',
-            tagType: 'tech'
-          },
-          {
-            id: 3,
-            tagName: 'projectCard',
-            tagType: 'tech'
-          },
-          {
-            id: 4,
-            tagName: 'projectCard',
-            tagType: 'web-app'
-          },
-          {
-            id: 5,
-            tagName: 'projectCard',
-            tagType: 'doc'
-          }
-        ]
-      },
-      {
-        title: 'Project - EFG',
-        image: 'https://picsum.photos/1000/1000',
-        postedAt: 'monday, May 2023',
-        description: 'This is the project description and I am happy to debug my reactJS application',
-        githubLink: 'https://www.github.com/Vilayat-Ali',
-        tags: [
-          {
-            id: 1,
-            tagName: 'ReactJS',
-            tagType: 'package'
-          },
-          {
-            id: 2,
-            tagName: 'Redux',
-            tagType: 'tech'
-          },
-          {
-            id: 3,
-            tagName: 'projectCard',
-            tagType: 'tech'
-          },
-          {
-            id: 4,
-            tagName: 'projectCard',
-            tagType: 'web-app'
-          },
-          {
-            id: 5,
-            tagName: 'projectCard',
-            tagType: 'doc'
-          }
-        ]
-      },
-      {
-        title: 'Project - ABC',
-        image: 'https://picsum.photos/1000/1000',
-        postedAt: 'monday, May 2023',
-        description: 'This is the project description and I am happy to debug my reactJS application',
-        tags: [
-          {
-            id: 1,
-            tagName: 'ReactJS',
-            tagType: 'package'
-          },
-          {
-            id: 2,
-            tagName: 'Redux',
-            tagType: 'tech'
-          },
-          {
-            id: 3,
-            tagName: 'projectCard',
-            tagType: 'tech'
-          },
-          {
-            id: 4,
-            tagName: 'projectCard',
-            tagType: 'web-app'
-          },
-          {
-            id: 5,
-            tagName: 'projectCard',
-            tagType: 'doc'
-          }
-        ]
+    useEffect(() => {
+      const fetchProjects = async() => {
+        await axios.get(
+          'http://127.0.0.1:8000/api/project/'
+        ).then((res: any) => {
+          setProjects(res.data.data);
+        }).catch((err: any) => alert(err.message))
       }
-    ];
-
+      fetchProjects();
+    }, []);
 
   return (
     <>
@@ -125,17 +32,17 @@ export default function Project() {
                 <option value="Tag">Tag</option>
         </SearchBar>
 
-        { mockData.filter(function(project){
+        { projects.filter(function(project: any){
           if(searchTerm === ''){
             return project;
           }
           else{
-            if(sortBy === 'Name' && project.title.toLowerCase().includes(searchTerm.toLowerCase())){
+            if(sortBy === 'Name' && project?.title.toLowerCase().includes(searchTerm.toLowerCase())){
               return project;
             }
             else if(sortBy === 'Tag'){
               var isPresent = false;
-              project.tags.map(function(tag){
+              project?.tags.map(function(tag: any){
                 if(tag.tagName.toLowerCase().includes(searchTerm.toLowerCase())){
                   isPresent = true;
                 }
@@ -144,10 +51,10 @@ export default function Project() {
             }
             else if(sortBy === ''){
               isPresent = false;
-              if(project.title.toLowerCase().includes(searchTerm.toLowerCase())){
+              if(project?.title.toLowerCase().includes(searchTerm.toLowerCase())){
                 isPresent = true;
               }
-              project.tags.map(function(tag){
+              project?.tags.map(function(tag: any){
                 if(tag.tagName.toLowerCase().includes(searchTerm.toLowerCase())){
                   isPresent = true;
                 }
@@ -157,17 +64,17 @@ export default function Project() {
 
             }
           }
-        }).map(function(project){
+        }).map(function(project: any){
           return (
 
             <ProjectCard 
-             key={project.title}
-             title={project.title}
-             githubLink={project.githubLink}
-             image={project.image}
-             postedAt={project.postedAt}
-             description={project.description} 
-             tags={project.tags} />
+             key={project?.title}
+             title={project?.title}
+             githubLink={project?.githubLink}
+             image={project?.image}
+             postedAt={project?.postedAt}
+             description={project?.description} 
+             tags={project?.tags} />
 
           )
         })

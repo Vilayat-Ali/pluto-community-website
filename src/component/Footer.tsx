@@ -27,7 +27,7 @@ export default function Footer(){
 
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-info">
-                            <h3>Neuron</h3>
+                            <h3>Pluto</h3>
                             <p>
                                 We are a passionate group of techies who have come toegther to form a community that aims at solving the Important problems in this world.
                             </p>
@@ -58,13 +58,13 @@ export default function Footer(){
 
                             <li>
                             <Link to="/news">
-                            <i className="bi bi-chevron-right"></i> <a href="/">News</a>
+                            <i className="bi bi-chevron-right"></i> <a href="/news">News</a>
                             </Link>
                             </li>
 
                             <li>
                             <Link to="/Join">
-                            <i className="bi bi-chevron-right"></i> <a href="/">Join</a>
+                            <i className="bi bi-chevron-right"></i> <a href="/join">Join</a>
                             </Link>
                             </li>
 
@@ -100,7 +100,7 @@ export default function Footer(){
 
                         <div className="d-flex flex-column align-items-center align-items-lg-start">
                         <div className="copyright">
-                            &copy; Copyright <strong><span>Neuron</span></strong> logo. All Rights Reserved. Credits to <a href="https://bootstrapmade.com">bootstrapmade.com</a>
+                            &copy; Copyright <strong><span>Pluto</span></strong> logo. All Rights Reserved. Teamplate by <a href="https://bootstrapmade.com">bootstrapmade.com</a>
                         </div>
                         </div>
 

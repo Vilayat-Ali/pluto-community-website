@@ -15,7 +15,7 @@ export default function TeamCard(props: teamCardType) {
     
     <div className="col-12 col-sm-6 col-lg-3">
             <div className="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style={{visibility: 'visible', animationDelay: '0.2', animationName: 'fadeInUp'}}>
-              <div className="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""/>
+              <div className="advisor_thumb"><img src={props.image} alt=""/>
                 <div className="social-info">
                   <a href={props.github}><i className="fa fa-github"></i></a>
                   <a href={props.twitter}><i className="fa fa-twitter"></i></a>

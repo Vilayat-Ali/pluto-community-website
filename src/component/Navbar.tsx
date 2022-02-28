@@ -10,7 +10,7 @@ export default function Navbar(){
     <div className="container-fluid d-flex align-items-center justify-content-between">
 
       <a href="index.html" className="logo d-flex align-items-center scrollto me-auto me-lg-0">
-        <h1>Neuron<span>.</span></h1>
+        <h1>Pluto<span>.</span></h1>
       </a>
 
       <nav id="navbar" className="navbar">

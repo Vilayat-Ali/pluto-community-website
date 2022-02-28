@@ -5,32 +5,34 @@ import axios from 'axios';
 import NewsCard from '../../component/Cards/NewsCard';
 
 export default function News() {
-    const demo = [
-        {
-            link: 'https://www.github.com/Vilayat-Ali',
-            message: 'Github'
-        },
-        {
-            link: 'https://www.github.com/Vilayat-Ali',
-            message: 'Vilayat'
-        },
-        {
-            link: 'https://www.github.com/Vilayat-Ali',
-            message: 'This is a link'
+
+    const [news, setNews] = useState([]);
+
+    useEffect(() => {
+        const fetchNews = async() => {
+            await axios.get(
+                'http://127.0.0.1:8000/api/news/'
+            ).then( (res: any) => {
+                setNews(res.data.data);
+            }).catch( (err: any) => {
+                alert(err.message)
+            })
         }
-    ]
+        fetchNews();
+    }, []);
+
   return (
         <>
         <div className="container row my-5">
 
             {
-                [...Array(5)].map( function (news: any){
+                news.map( (news: any) => {
                     return (
                         <NewsCard 
-                        message="my message goes here"
-                        issuer="Syed Vilayat"
-                        links={demo}
-                        date="04 May, 2020"
+                        message={news?.message}
+                        issuer={news?.issuer}
+                        links={news?.links}
+                        date={news?.date}
                         />
                     )
                 })
